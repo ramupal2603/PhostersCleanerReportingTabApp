@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.qrCodeScannerView.QrCodeScannerViewActivity"
+    tools:ignore="MissingDefaultResource"
+    tools:showIn="@layout/activity_scan_qr_code">
+
+
+    <include layout="@layout/action_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+            android:id="@+id/txtWelcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center"
+            android:text="@string/welcome_text"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/mediumTextSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_120sdp"
+            android:layout_marginRight="@dimen/_120sdp"
+            android:background="@color/whiteColor" />
+
+        <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/scan_qrcode_to_log_in"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/headerTextSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="@dimen/_120sdp"
+            android:layout_marginRight="@dimen/_120sdp"
+            android:background="@color/whiteColor" />
+
+        <com.budiyev.android.codescanner.CodeScannerView
+            android:id="@+id/scannerView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:autoFocusButtonVisible="false"
+            app:flashButtonVisible="false"
+            android:layout_gravity="center"
+            app:frameColor="@color/themeColor"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:frameCornersRadius="@dimen/_15sdp"
+            app:frameSize="0.95"
+            app:frameThickness="@dimen/_3sdp"
+            app:frameCornersCapRounded="true"
+            app:maskColor="#6A6C6C"
+            app:maskVisible="false" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <com.brinfotech.feedbacksystem.customClasses.FontTextViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/forgot_pass"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/verySmallTextSize" />
+
+
+            <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+                android:id="@+id/txtClickHere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="@string/click_here"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/verySmallTextSize" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:gravity="center_vertical|center"
+        android:text="@string/login_bottom_title"
+        android:textColor="#929292"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone" />
+
+
+</LinearLayout>

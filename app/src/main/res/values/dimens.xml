@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="fab_margin">@dimen/_10sdp</dimen>
+    <dimen name="common_margin">@dimen/_8sdp</dimen>
+    <dimen name="edtTextHeight">@dimen/_55sdp</dimen>
+    <dimen name="headerTextSize">@dimen/_20sdp</dimen>
+    <dimen name="smallHeaderTextSize">@dimen/_18sdp</dimen>
+    <dimen name="largeTextSize">@dimen/_25sdp</dimen>
+    <dimen name="ExtraLargeTextSize">@dimen/_35sdp</dimen>
+    <dimen name="mediumTextSize">@dimen/_16sdp</dimen>
+    <dimen name="smallTextSize">@dimen/_14sdp</dimen>
+    <dimen name="verySmallTextSize">@dimen/_12sdp</dimen>
+    <dimen name="commonViewMargin">@dimen/_20sdp</dimen>
+    <dimen name="corner_round_shape">@dimen/common_margin</dimen>
+    <dimen name="view_width">400dp</dimen>
+    <dimen name="space_5">5dp</dimen>
+
+</resources>

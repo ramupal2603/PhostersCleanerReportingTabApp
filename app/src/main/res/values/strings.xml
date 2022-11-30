@@ -35,4 +35,5 @@
     <string name="please_confirm">Please Confirm</string>
     <string name="please_enter_valid_pin">Please enter valid pin no</string>
     <string name="select_site_here">Select site here</string>
+    <string name="remote_pdf_url">Remotre</string>
 </resources>

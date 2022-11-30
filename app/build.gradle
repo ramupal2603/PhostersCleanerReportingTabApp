@@ -78,6 +78,8 @@ dependencies {
     //Dimension
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
+    //PDF View Pager
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
 
 }
 apply plugin: 'com.google.gms.google-services'

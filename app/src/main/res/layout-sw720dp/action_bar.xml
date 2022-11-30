@@ -12,13 +12,13 @@
 
 
         <ImageView
+            android:id="@+id/imgHeaderLogo"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:padding="@dimen/_15sdp"
-            android:visibility="invisible"
-            android:scaleType="fitStart"
-            android:src="@drawable/ic_small_logo" />
+            android:visibility="visible"
+            android:scaleType="fitStart" />
 
         <com.brinfotech.feedbacksystem.customClasses.FontsTextView
             android:id="@+id/txtTime"

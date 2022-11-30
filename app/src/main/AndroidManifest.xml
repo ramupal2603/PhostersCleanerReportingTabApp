@@ -37,6 +37,18 @@
             android:windowSoftInputMode="adjustPan" />
 
         <activity
+            android:name=".ui.COSHHView.PinSubmitActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.COSHHView.WebViewPDFActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
             android:name=".ui.qrCodeScannerView.QrCodeScannerViewActivity"
             android:configChanges="keyboardHidden|orientation"
             android:theme="@style/AppTheme.NoActionBar"

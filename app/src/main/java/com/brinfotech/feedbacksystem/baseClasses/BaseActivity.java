@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ import com.brinfotech.feedbacksystem.customClasses.ProgressLoader;
 import com.brinfotech.feedbacksystem.helpers.ConstantClass;
 import com.brinfotech.feedbacksystem.helpers.DateTimeUtils;
 import com.brinfotech.feedbacksystem.helpers.PreferenceKeys;
+import com.brinfotech.feedbacksystem.ui.COSHHView.PinSubmitActivity;
 import com.brinfotech.feedbacksystem.ui.Utils;
 import com.brinfotech.feedbacksystem.ui.manualSignInView.ManualSignInViewActivity;
 import com.brinfotech.feedbacksystem.ui.siteSelectionView.SiteSelectionViewActivity;
@@ -33,15 +35,14 @@ import butterknife.Unbinder;
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
 
     Unbinder unbinder = null;
-
-
-    private ProgressLoader loader;
-
     @Nullable
     @BindView(R.id.txtTime)
     TextView txtTime;
-
+    @Nullable
+    @BindView(R.id.imgHeaderLogo)
+    ImageView imgHeaderLogo;
     CountDownTimer newTimer;
+    private ProgressLoader loader;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -60,6 +61,16 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
                     finish();
                 }
             });
+        }
+
+        if (imgHeaderLogo != null) {
+            imgHeaderLogo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivity(new Intent(getApplicationContext(), PinSubmitActivity.class));
+                }
+            });
+
         }
 
     }

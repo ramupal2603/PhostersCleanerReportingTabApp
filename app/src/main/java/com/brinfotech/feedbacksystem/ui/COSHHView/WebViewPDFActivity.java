@@ -1,18 +1,24 @@
 package com.brinfotech.feedbacksystem.ui.COSHHView;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.brinfotech.feedbacksystem.R;
 import com.brinfotech.feedbacksystem.baseClasses.BaseActivity;
 
+import butterknife.BindView;
+
 public class WebViewPDFActivity extends BaseActivity {
+
+
+    @BindView(R.id.btnConfirm)
+    Button btnConfirm;
 
     private int i = 0;
 
@@ -34,28 +40,7 @@ public class WebViewPDFActivity extends BaseActivity {
 
         showPdfFile(strArray[i]);
 
-       /* imageViewLeft.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (i != 0) {
-                    showPdfFile(strArray[i--]);
-                } else {
-                    Toast.makeText(getApplicationContext(), "You're on first PDF", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-        imageViewRight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (i != strArray.length) {
-                    showPdfFile(strArray[i++]);
-                } else {
-                    Toast.makeText(getApplicationContext(), "Going to first PDF", Toast.LENGTH_SHORT).show();
-                    showPdfFile(strArray[0]);
-                }
-            }
-        });*/
+        btnConfirm.setOnClickListener(this::onClick);
 
     }
 
@@ -100,6 +85,8 @@ public class WebViewPDFActivity extends BaseActivity {
 
     @Override
     public void onClick(View view) {
-
+        if (view == btnConfirm) {
+            startActivity(new Intent(getApplicationContext(), DeclarationFormActivity.class));
+        }
     }
 }

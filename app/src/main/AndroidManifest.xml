@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -44,6 +45,12 @@
 
         <activity
             android:name=".ui.COSHHView.WebViewPDFActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".ui.COSHHView.DeclarationFormActivity"
             android:configChanges="keyboardHidden|orientation"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" />

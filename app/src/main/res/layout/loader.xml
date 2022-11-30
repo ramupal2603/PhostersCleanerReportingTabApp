@@ -6,13 +6,22 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <com.rey.material.widget.ProgressView
+    <ProgressBar
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/themeColor"
+        android:indeterminateTintMode="src_atop" />
+
+    <!--<com.rey.material.widget.ProgressView
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         app:pv_autostart="true"
         app:pv_circular="true"
         app:pv_progressMode="indeterminate"
-        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />-->
 
 </LinearLayout>

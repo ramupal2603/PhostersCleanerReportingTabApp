@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    tools:context=".ui.COSHHView.DeclarationFormActivity"
+    tools:ignore="MissingDefaultResource">
+
+
+    <include layout="@layout/action_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/common_margin"
+            android:gravity="top|center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/space_10"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_heights"
+                            android:layout_marginTop="@dimen/common_margin">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/space_20"
+                                android:layout_weight="1"
+                                android:background="@drawable/edt_background">
+
+                                <EditText
+                                    android:id="@+id/edtFullName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="Full Name"
+                                    android:inputType="none"
+                                    android:paddingLeft="@dimen/largeMargin"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/normalTextSize" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/view_heights"
+                                    android:layout_marginRight="@dimen/space_20"
+                                    android:background="@drawable/edt_background">
+
+
+                                    <EditText
+                                        android:id="@+id/edtDateCompleted"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center_vertical"
+                                        android:hint="Date completed"
+                                        android:inputType="none"
+                                        android:paddingLeft="@dimen/largeMargin"
+                                        android:textColor="@color/colorBlack"
+                                        android:textSize="@dimen/normalTextSize" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/view_heights"
+                            android:layout_marginTop="@dimen/common_margin"
+                            >
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/space_20"
+                                android:layout_weight="1"
+                                android:background="@drawable/edt_background">
+
+                                <EditText
+                                    android:id="@+id/edtLocation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical"
+                                    android:hint="Location/Site"
+                                    android:paddingLeft="@dimen/largeMargin"
+                                    android:textColor="@color/colorBlack"
+                                    android:inputType="none"
+                                    android:textSize="@dimen/normalTextSize" />
+
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center">
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/view_heights"
+                                    android:layout_marginRight="@dimen/space_20"
+                                    android:background="@drawable/edt_background">
+
+                                    <EditText
+                                        android:id="@+id/edtPinNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@android:color/transparent"
+                                        android:gravity="center_vertical"
+                                        android:hint="Operative PIN No"
+                                        android:paddingLeft="@dimen/largeMargin"
+                                        android:textColor="@color/colorBlack"
+                                        android:imeOptions="actionDone"
+                                        android:inputType="none"
+                                        android:textSize="@dimen/normalTextSize" />
+
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/common_margin"
+                            android:layout_height="@dimen/view_heights">
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/view_heights"
+                                android:layout_weight="1"
+                                android:layout_marginRight="@dimen/space_20"
+                                android:background="@drawable/edt_background">
+
+
+                                <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+                                    android:id="@+id/txtSignature"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="@dimen/largeMargin"
+                                    android:text="Signature"
+                                    android:textColor="@color/darkGrayColor"
+                                    android:textSize="@dimen/normalTextSize" />
+
+
+                                <ImageView
+                                    android:id="@+id/imgSignature"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="10dp" />
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:layout_marginRight="@dimen/space_20"
+                                android:layout_height="match_parent">
+
+                                <Button
+                                    android:id="@+id/btnConfirm"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.7"
+                                    android:layout_marginStart="@dimen/common_margin"
+                                    android:layout_gravity="center"
+                                    android:gravity="start|center"
+                                    android:background="@drawable/btn_border_color"
+                                    android:paddingLeft="@dimen/_15sdp"
+                                    android:text="Submit"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="@dimen/smallTextSize" />
+
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/loutBtnView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/space_10"
+                            android:layout_marginRight="40dp"
+                            android:gravity="end">
+
+
+                            <LinearLayout
+                                android:id="@+id/backLayout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/space_10"
+                                android:layout_marginLeft="@dimen/space_20"
+                                android:background="@drawable/ic_back_to_main_menu"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentLeft="true"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/space_10"/>
+
+
+
+
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

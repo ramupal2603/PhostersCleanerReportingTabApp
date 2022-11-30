@@ -6,6 +6,8 @@ public class WebApiHelper {
     public static final String SIGN_IN_OUT_QRCODE = "scanQrcode";
     public static final String PIN_LOGIN = "pinLogin";
     public static final String GET_SITE_LIST = "getSites";
+    public static final String UPLOAD_SIGNATURE = "uploadSignature";
+    public static final String INSERT_COSHH = "insertCoshh";
 
     public static final String DEVICE_TYPE_TAB = "1";
     public static final String DEVICE_TYPE_MOBILE = "2";
@@ -23,10 +25,10 @@ public class WebApiHelper {
 
 
     //BaseUrl of Repository
-    public static String BASE_URL = "https://cmplus.co.uk/Phosters-Cleaners/Webservice/";
+//    public static String BASE_URL = "https://cmplus.co.uk/Phosters-Cleaners/Webservice/";
 
     //This is base test URL
-//    public static String BASE_URL = "https://konnectico.co.uk/Phosters-Development/Webservice/";
+    public static String BASE_URL = "https://konnectico.co.uk/Phosters-Development/Webservice/";
 
 
 

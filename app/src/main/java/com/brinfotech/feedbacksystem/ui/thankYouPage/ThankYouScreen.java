@@ -56,6 +56,8 @@ public class ThankYouScreen extends BaseActivity {
         } else if (status.equals(WebApiHelper.STATUS_SIGNED_OUT)) {
             txtThanksMessage.setText(R.string.signed_out_thanks_msg);
             playSignedOutVoice();
+        } else {
+            txtThanksMessage.setText(R.string.declaration_form_thanks_msg);
         }
     }
 

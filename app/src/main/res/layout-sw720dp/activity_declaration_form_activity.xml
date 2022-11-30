@@ -63,7 +63,7 @@
                                     android:background="@android:color/transparent"
                                     android:gravity="center_vertical"
                                     android:hint="Full Name"
-                                    android:inputType="none"
+                                    android:editable="false"
                                     android:paddingLeft="@dimen/largeMargin"
                                     android:textColor="@color/colorBlack"
                                     android:textSize="@dimen/normalTextSize" />
@@ -91,7 +91,7 @@
                                         android:background="@android:color/transparent"
                                         android:gravity="center_vertical"
                                         android:hint="Date completed"
-                                        android:inputType="none"
+                                        android:editable="false"
                                         android:paddingLeft="@dimen/largeMargin"
                                         android:textColor="@color/colorBlack"
                                         android:textSize="@dimen/normalTextSize" />
@@ -124,6 +124,7 @@
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent"
                                     android:gravity="center_vertical"
+                                    android:editable="false"
                                     android:hint="Location/Site"
                                     android:paddingLeft="@dimen/largeMargin"
                                     android:textColor="@color/colorBlack"
@@ -155,6 +156,7 @@
                                         android:layout_weight="1"
                                         android:background="@android:color/transparent"
                                         android:gravity="center_vertical"
+                                        android:editable="false"
                                         android:hint="Operative PIN No"
                                         android:paddingLeft="@dimen/largeMargin"
                                         android:textColor="@color/colorBlack"

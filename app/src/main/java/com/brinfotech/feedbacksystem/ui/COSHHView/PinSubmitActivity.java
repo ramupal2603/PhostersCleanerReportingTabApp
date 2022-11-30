@@ -13,8 +13,10 @@ import androidx.annotation.Nullable;
 
 import com.brinfotech.feedbacksystem.R;
 import com.brinfotech.feedbacksystem.baseClasses.BaseActivity;
+import com.brinfotech.feedbacksystem.data.DataUtils;
 import com.brinfotech.feedbacksystem.data.pinLogin.PinLoginRequestModel;
 import com.brinfotech.feedbacksystem.data.pinLogin.PinLoginResponseModel;
+import com.brinfotech.feedbacksystem.data.signINOut.ScanQrCodeDataModel;
 import com.brinfotech.feedbacksystem.helpers.ConstantClass;
 import com.brinfotech.feedbacksystem.helpers.PreferenceKeys;
 import com.brinfotech.feedbacksystem.helpers.StringUtils;
@@ -57,6 +59,8 @@ public class PinSubmitActivity extends BaseActivity {
     @BindView(R.id.loutPinView)
     LinearLayout loutPinView;
 
+    ScanQrCodeDataModel userModel;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +86,12 @@ public class PinSubmitActivity extends BaseActivity {
             clearConfirmView();
             toggleLayoutVisibility(loutPinView);
         } else if (view == btnConfirm) {
-            startActivity(new Intent(getApplicationContext(), WebViewPDFActivity.class));
+            String jsonString = DataUtils.convertDataToString(userModel);
+
+            Intent intent = new Intent(PinSubmitActivity.this, WebViewPDFActivity.class);
+            intent.putExtra(ConstantClass.EXTRAA_FORM_DATA, jsonString);
+            startActivity(intent);
+            finish();
         }
     }
 
@@ -113,10 +122,11 @@ public class PinSubmitActivity extends BaseActivity {
                     PinLoginResponseModel responseModel = response.body();
                     if (responseModel != null && responseModel.getStatus().
                             equals(ConstantClass.RESPONSE_SUCCESS_CONFIRM)) {
+                        userModel = responseModel.getVisitor_details();
                         setConfirmViewData(responseModel.getVisitor_details().getUser_id(),
                                 responseModel.getVisitor_details().getUser_name());
                         toggleLayoutVisibility(loutConfirmView);
-                    }else{
+                    } else {
                         showToastMessage(getResources().getString(R.string.please_enter_valid_pin));
                     }
                 }
@@ -131,39 +141,9 @@ public class PinSubmitActivity extends BaseActivity {
     }
 
 
-    private void callSignInOutPinNoAPI(String edtPinNo) {
-        showProgressBar();
-
-        RetrofitInterface apiService = RetrofitClient.getRetrofit().create(RetrofitInterface.class);
-        apiService.pinLogin(getPinRequestDataForSignInOut(edtPinNo)).enqueue(new Callback<PinLoginResponseModel>() {
-            @Override
-            public void onResponse(Call<PinLoginResponseModel> call, Response<PinLoginResponseModel> response) {
-                hideProgressBar();
-                if (response.isSuccessful()) {
-                    PinLoginResponseModel responseModel = response.body();
-                    if (responseModel != null &&
-                            (responseModel.getStatus().equals(ConstantClass.RESPONSE_SUCCESS_SIGN_IN) ||
-                                    responseModel.getStatus().equals(ConstantClass.RESPONSE_SUCCESS_SIGN_OUT))) {
-                        Intent intent = new Intent();
-                        intent.putExtra(ConstantClass.EXTRAA_FORM_NAME, responseModel.getVisitor_details().getUser_name());
-                        intent.putExtra(ConstantClass.EXTRAA_FORM_DATA, responseModel.getStatus());
-                        setResult(RESULT_OK, intent);
-                        finish();
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<PinLoginResponseModel> call, Throwable t) {
-                t.printStackTrace();
-                hideProgressBar();
-            }
-        });
-    }
-
     private PinLoginRequestModel getPinRequestDataForSignInOut(String edtPinNo) {
         PinLoginRequestModel pinLoginRequestModel = new PinLoginRequestModel();
-        pinLoginRequestModel.setSite_id(Prefs.getString(PreferenceKeys.SITE_ID,"0"));
+        pinLoginRequestModel.setSite_id(Prefs.getString(PreferenceKeys.SITE_ID, "0"));
         pinLoginRequestModel.setLogin_confirm("0");
         pinLoginRequestModel.setVisitor_id(edtPinNo);
 
@@ -177,7 +157,7 @@ public class PinSubmitActivity extends BaseActivity {
 
     private PinLoginRequestModel getPinRequestData(String edtPinNo) {
         PinLoginRequestModel pinLoginRequestModel = new PinLoginRequestModel();
-        pinLoginRequestModel.setSite_id(Prefs.getString(PreferenceKeys.SITE_ID,"0"));
+        pinLoginRequestModel.setSite_id(Prefs.getString(PreferenceKeys.SITE_ID, "0"));
         pinLoginRequestModel.setLogin_confirm("1");
         pinLoginRequestModel.setVisitor_id(edtPinNo);
 

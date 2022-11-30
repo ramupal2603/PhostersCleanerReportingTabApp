@@ -22,6 +22,7 @@
     <string name="no_staff_records_found">No Staff Records Found</string>
     <string name="signed_in_thanks_msg">You are now signed in</string>
     <string name="signed_out_thanks_msg">You are now signed out</string>
+    <string name="declaration_form_thanks_msg">For Submission of Declaration Form</string>
     <string name="staff">Staff</string>
     <string name="fire_evacuation_success">Fire Evacuation list has been saved in admin</string>
     <string name="thank_you">Thank You.</string>

@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 
 import com.brinfotech.feedbacksystem.R;
 import com.brinfotech.feedbacksystem.baseClasses.BaseActivity;
+import com.brinfotech.feedbacksystem.helpers.ConstantClass;
 
 import butterknife.BindView;
 
@@ -19,13 +20,11 @@ public class WebViewPDFActivity extends BaseActivity {
 
     @BindView(R.id.btnConfirm)
     Button btnConfirm;
-
+    String jsonData;
     private int i = 0;
-
     private WebView pdfView;
     private ProgressBar progress;
     private String removePdfTopIcon = "javascript:(function() {" + "document.querySelector('[role=\"toolbar\"]').remove();})()";
-
     private String[] strArray = {
             "https://www.legislation.gov.uk/uksi/2002/2677/pdfs/uksi_20022677_en.pdf",
     };
@@ -41,6 +40,14 @@ public class WebViewPDFActivity extends BaseActivity {
         showPdfFile(strArray[i]);
 
         btnConfirm.setOnClickListener(this::onClick);
+        getData();
+
+    }
+
+    private void getData() {
+        if (getIntent()!= null) {
+            jsonData = getIntent().getStringExtra(ConstantClass.EXTRAA_FORM_DATA);
+        }
 
     }
 
@@ -86,7 +93,10 @@ public class WebViewPDFActivity extends BaseActivity {
     @Override
     public void onClick(View view) {
         if (view == btnConfirm) {
-            startActivity(new Intent(getApplicationContext(), DeclarationFormActivity.class));
+            Intent intent = new Intent(WebViewPDFActivity.this, DeclarationFormActivity.class);
+            intent.putExtra(ConstantClass.EXTRAA_FORM_DATA, jsonData);
+            startActivity(intent);
+            finish();
         }
     }
 }

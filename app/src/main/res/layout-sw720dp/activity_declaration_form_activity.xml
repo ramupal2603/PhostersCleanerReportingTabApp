@@ -14,15 +14,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8sdp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginTop="@dimen/_5sdp"
             android:gravity="top|center"
             android:orientation="vertical">
 
@@ -61,9 +61,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent"
+                                    android:editable="false"
                                     android:gravity="center_vertical"
                                     android:hint="Full Name"
-                                    android:editable="false"
                                     android:paddingLeft="@dimen/largeMargin"
                                     android:textColor="@color/colorBlack"
                                     android:textSize="@dimen/normalTextSize" />
@@ -89,9 +89,9 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:background="@android:color/transparent"
+                                        android:editable="false"
                                         android:gravity="center_vertical"
                                         android:hint="Date completed"
-                                        android:editable="false"
                                         android:paddingLeft="@dimen/largeMargin"
                                         android:textColor="@color/colorBlack"
                                         android:textSize="@dimen/normalTextSize" />
@@ -107,8 +107,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/view_heights"
-                            android:layout_marginTop="@dimen/common_margin"
-                            >
+                            android:layout_marginTop="@dimen/common_margin">
 
 
                             <LinearLayout
@@ -123,14 +122,13 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="@android:color/transparent"
-                                    android:gravity="center_vertical"
                                     android:editable="false"
+                                    android:gravity="center_vertical"
                                     android:hint="Location/Site"
+                                    android:inputType="none"
                                     android:paddingLeft="@dimen/largeMargin"
                                     android:textColor="@color/colorBlack"
-                                    android:inputType="none"
                                     android:textSize="@dimen/normalTextSize" />
-
 
 
                             </LinearLayout>
@@ -155,13 +153,13 @@
                                         android:layout_height="match_parent"
                                         android:layout_weight="1"
                                         android:background="@android:color/transparent"
-                                        android:gravity="center_vertical"
                                         android:editable="false"
+                                        android:gravity="center_vertical"
                                         android:hint="Operative PIN No"
-                                        android:paddingLeft="@dimen/largeMargin"
-                                        android:textColor="@color/colorBlack"
                                         android:imeOptions="actionDone"
                                         android:inputType="none"
+                                        android:paddingLeft="@dimen/largeMargin"
+                                        android:textColor="@color/colorBlack"
                                         android:textSize="@dimen/normalTextSize" />
 
 
@@ -175,15 +173,15 @@
                         <LinearLayout
 
                             android:layout_width="match_parent"
-                            android:layout_marginTop="@dimen/common_margin"
-                            android:layout_height="@dimen/view_heights">
+                            android:layout_height="@dimen/view_heights"
+                            android:layout_marginTop="@dimen/common_margin">
 
 
                             <RelativeLayout
                                 android:layout_width="0dp"
                                 android:layout_height="@dimen/view_heights"
-                                android:layout_weight="1"
                                 android:layout_marginRight="@dimen/space_20"
+                                android:layout_weight="1"
                                 android:background="@drawable/edt_background">
 
 
@@ -209,39 +207,31 @@
 
                             <LinearLayout
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
-                                android:orientation="horizontal"
+                                android:layout_height="match_parent"
                                 android:layout_marginRight="@dimen/space_20"
-                                android:layout_height="match_parent">
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
 
                                 <Button
                                     android:id="@+id/btnConfirm"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
-                                    android:layout_weight="0.7"
-                                    android:layout_marginStart="@dimen/common_margin"
                                     android:layout_gravity="center"
-                                    android:gravity="start|center"
+                                    android:layout_marginStart="@dimen/common_margin"
+                                    android:layout_weight="0.7"
                                     android:background="@drawable/btn_border_color"
+                                    android:gravity="start|center"
                                     android:paddingLeft="@dimen/_15sdp"
-                                    android:text="Submit"
+                                    android:text="Sign &amp; Submit Declaration"
+                                    android:textAllCaps="false"
                                     android:textColor="@color/colorWhite"
                                     android:textSize="@dimen/smallTextSize" />
-
-
 
 
                             </LinearLayout>
 
 
-
-
-
-
-
-
                         </LinearLayout>
-
 
 
                         <RelativeLayout
@@ -252,23 +242,49 @@
                             android:layout_marginRight="40dp"
                             android:gravity="end">
 
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentStart="true">
+
+                                <CheckBox
+                                    android:id="@+id/chkAgree"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:textColor="@color/whiteColor"
+                                    android:button="@drawable/ic_check_selector"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:text="By clicking here, I state that I have read and understood the COSSH regulations." />
+
+
+                            </LinearLayout>
+
 
                             <LinearLayout
                                 android:id="@+id/backLayout"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/space_10"
-                                android:layout_marginLeft="@dimen/space_20"
-                                android:background="@drawable/ic_back_to_main_menu"
+                                android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="@dimen/space_20"
+                                android:layout_marginTop="@dimen/space_10"
+                                android:visibility="gone"
+                                android:background="@drawable/ic_back_to_main_menu"
                                 android:gravity="center"
                                 android:orientation="horizontal"
-                                android:padding="@dimen/space_10"/>
+                                android:padding="@dimen/space_10" />
 
 
-
-
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/space_20"
+                                android:layout_marginTop="@dimen/space_10"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/space_10" />
 
 
                         </RelativeLayout>
@@ -283,8 +299,6 @@
 
 
         </LinearLayout>
-
-
 
 
     </RelativeLayout>

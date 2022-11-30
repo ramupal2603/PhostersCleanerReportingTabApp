@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,18 +40,28 @@ public class DeclarationFormActivity extends BaseActivity {
     private static final int REQUEST_SIGN_OUT_SIGNATURE = 1001;
     @BindView(R.id.edtFullName)
     EditText edtFullName;
+
     @BindView(R.id.edtDateCompleted)
     EditText edtDateCompleted;
+
     @BindView(R.id.edtLocation)
     EditText edtLocation;
+
     @BindView(R.id.edtPinNo)
     EditText edtPinNo;
+
     @BindView(R.id.txtSignature)
     TextView txtSignature;
+
     @BindView(R.id.imgSignature)
     ImageView imgSignature;
+
     @BindView(R.id.btnConfirm)
     Button btnConfirm;
+
+    @BindView(R.id.chkAgree)
+    CheckBox chkAgree;
+
     ScanQrCodeDataModel userModel;
     String signature1 = "";
     private File file1 = null;
@@ -91,7 +102,14 @@ public class DeclarationFormActivity extends BaseActivity {
         }
 
         if (view == btnConfirm) {
-            uploadfile(file1);
+            if (file1 == null) {
+                showToastMessage(getResources().getString(R.string.select_file));
+            } else if (!chkAgree.isChecked()) {
+                showToastMessage(getResources().getString(R.string.chk_agrrement));
+            } else {
+                uploadfile(file1);
+            }
+
         }
     }
 

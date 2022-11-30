@@ -28,11 +28,14 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/_25sdp"
             android:layout_alignParentEnd="true"
+            android:textAllCaps="false"
             android:layout_marginStart="@dimen/common_margin"
             android:background="@drawable/btn_border_color"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_marginTop="@dimen/common_margin"
             android:paddingLeft="@dimen/_15sdp"
             android:paddingRight="@dimen/_15sdp"
-            android:text="Submit"
+            android:text="Sign &amp; Submit Declaration"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/smallTextSize" />
 

@@ -36,5 +36,7 @@
     <string name="please_confirm">Please Confirm</string>
     <string name="please_enter_valid_pin">Please enter valid pin no</string>
     <string name="select_site_here">Select site here</string>
-    <string name="remote_pdf_url">Remotre</string>
+    <string name="remote_pdf_url">Remote</string>
+    <string name="select_file">Please do signature for proceed</string>
+    <string name="chk_agrrement">Please click on tickbox before submitting COSSH regulations</string>
 </resources>

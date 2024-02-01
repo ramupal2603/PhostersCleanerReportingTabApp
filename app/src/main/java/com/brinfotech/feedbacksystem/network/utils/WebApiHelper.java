@@ -25,10 +25,10 @@ public class WebApiHelper {
 
 
     //BaseUrl of Repository
-//    public static String BASE_URL = "https://cmplus.co.uk/Phosters-Cleaners/Webservice/";
+    public static String BASE_URL = "https://cmplus.co.uk/Phosters-Cleaners/Webservice/";
 
     //This is base test URL
-    public static String BASE_URL = "https://konnectico.co.uk/Phosters-Development/Webservice/";
+//    public static String BASE_URL = "https://konnectico.co.uk/Phosters-Development/Webservice/";
 
 
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class SiteListResponseModel {
 
     String status;
-    ArrayList<SiteListResponseDataModel> data;
+    ArrayList<SiteListResponseDataModel> site_details;
 
     public String getStatus() {
         return status;
@@ -16,10 +16,10 @@ public class SiteListResponseModel {
     }
 
     public ArrayList<SiteListResponseDataModel> getData() {
-        return data;
+        return site_details;
     }
 
     public void setData(ArrayList<SiteListResponseDataModel> data) {
-        this.data = data;
+        this.site_details = data;
     }
 }

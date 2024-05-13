@@ -5,7 +5,7 @@ public class WebApiHelper {
     //Method Listing
     public static final String SIGN_IN_OUT_QRCODE = "scanQrcode";
     public static final String PIN_LOGIN = "pinLogin";
-    public static final String GET_SITE_LIST = "getSites";
+    public static final String GET_SITE_LIST = "getSitesNew";
     public static final String UPLOAD_SIGNATURE = "uploadSignature";
     public static final String INSERT_COSHH = "insertCoshh";
 

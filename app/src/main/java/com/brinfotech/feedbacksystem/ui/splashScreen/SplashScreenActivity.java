@@ -20,6 +20,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+        Prefs.putString(PreferenceKeys.SITE_ID, "155");
         String siteId = Prefs.getString(PreferenceKeys.SITE_ID, "");
         if (siteId != null && !siteId.isEmpty()) {
             redirectDashboardActivity();

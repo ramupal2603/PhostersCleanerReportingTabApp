@@ -27,7 +27,7 @@
     <string name="fire_evacuation_success">Fire Evacuation list has been saved in admin</string>
     <string name="thank_you">Thank You.</string>
     <string name="no_staff_members_found">No Staff Members Found !!</string>
-    <string name="welcome_text">Welcome to DNE1 - Sunderland</string>
+    <string name="welcome_text">Welcome to Lime Group</string>
     <string name="scan_qrcode_to_log_in">[ Please scan QR code here ]</string>
     <string name="qr_code_not_valid_for_sign_in_out">Invalid QR Code For Sign in and Sign out,  Please Try Another One</string>
     <string name="forgot_pass">Forgot your pass? </string>

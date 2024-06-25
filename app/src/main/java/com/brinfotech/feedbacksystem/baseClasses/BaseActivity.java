@@ -57,8 +57,8 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
             txtTime.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    startActivity(new Intent(getApplicationContext(), SiteSelectionViewActivity.class));
-                    finish();
+                   /* startActivity(new Intent(getApplicationContext(), SiteSelectionViewActivity.class));
+                    finish();*/
                 }
             });
         }

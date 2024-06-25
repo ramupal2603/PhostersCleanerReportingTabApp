@@ -134,6 +134,7 @@ public class QrCodeScannerViewActivity extends BaseActivity implements View.OnCl
     @Override
     public void onClick(View view) {
         if (view == txtClickHere) {
+//            callSignInOutMethod("4026@3");
             openManualSignInView();
         }
     }

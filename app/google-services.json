@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "689082945269",
+    "firebase_url": "https://contractor-solution.firebaseio.com",
+    "project_id": "contractor-solution",
+    "storage_bucket": "contractor-solution.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689082945269:android:8c8c4b4f5b660cdb627fbc",
+        "android_client_info": {
+          "package_name": "com.adverticoLTD.estaffsol"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "689082945269-25pjnj9hbusstjiedcpusa9tnip5aosv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpcY7NKrlbMx25zl0O8K4Qhat9aJgiXKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "689082945269-25pjnj9hbusstjiedcpusa9tnip5aosv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

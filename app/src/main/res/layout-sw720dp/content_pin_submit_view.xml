@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.COSHHView.PinSubmitActivity"
+    tools:ignore="MissingDefaultResource"
+    tools:showIn="@layout/activity_pin_submit_view">
+
+
+    <include layout="@layout/action_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/loutPinView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.brinfotech.feedbacksystem.customClasses.FontTextViewBold
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/please_enter_pin"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/headerTextSize" />
+
+            <EditText
+                android:id="@+id/edtPinNo"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/edt_background"
+                android:hint="Enter Pin No here"
+                android:gravity="center"
+                android:textColor="@color/grayColor"
+                android:maxLines="1"
+                android:inputType="number"
+                android:paddingLeft="@dimen/common_margin"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <Button
+                android:id="@+id/btnSignInOut"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/btn_border_color"
+                android:text="COSHH Form Submission"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteColor"
+                android:textSize="@dimen/mediumTextSize" />
+
+            <ImageView
+                android:id="@+id/imgBackToMainMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_margin"
+                android:src="@drawable/ic_back_to_main_menu" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loutConfirmView"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:background="@drawable/edt_background"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/please_confirm"
+                android:textColor="@color/grayColor"
+                android:textSize="@dimen/largeTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_65sdp"
+                android:layout_marginRight="@dimen/_65sdp"
+                android:background="@color/grayColor" />
+
+
+            <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+                android:id="@+id/txtCleanerInputID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1610"
+                android:textColor="@color/themeColor"
+                android:textSize="@dimen/ExtraLargeTextSize" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_65sdp"
+                android:layout_marginRight="@dimen/_65sdp"
+                android:background="@color/grayColor" />
+
+            <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+                android:id="@+id/txtCleanerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Andy Oakes"
+                android:textColor="@color/grayColor"
+                android:textSize="@dimen/smallHeaderTextSize" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_margin"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btnCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:background="@drawable/btn_border_color"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="Cancel"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/smallTextSize" />
+
+                <Button
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/common_margin"
+                    android:background="@drawable/btn_border_color"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="Confirm"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/smallTextSize" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.brinfotech.feedbacksystem.customClasses.FontsTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:gravity="center_vertical|center"
+        android:text="@string/login_bottom_title"
+        android:textColor="#929292"
+        android:textSize="@dimen/smallTextSize"
+        android:visibility="gone" />
+
+
+</LinearLayout>

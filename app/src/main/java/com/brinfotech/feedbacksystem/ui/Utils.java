@@ -2,17 +2,12 @@ package com.brinfotech.feedbacksystem.ui;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Handler;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.brinfotech.feedbacksystem.helpers.ConstantClass;
-import com.vincent.filepicker.Constant;
-import com.vincent.filepicker.activity.NormalFilePickActivity;
-
-import static com.vincent.filepicker.activity.BaseActivity.IS_NEED_FOLDER_LIST;
 
 public class Utils {
 
@@ -42,12 +37,4 @@ public class Utils {
 
     }
 
-    public static void showFileChooser(Activity activity, int requestCode) {
-        Intent intent4 = new Intent(activity, NormalFilePickActivity.class);
-        intent4.putExtra(Constant.MAX_NUMBER, 1);
-        intent4.putExtra(IS_NEED_FOLDER_LIST, true);
-        intent4.putExtra(NormalFilePickActivity.SUFFIX,
-                new String[]{"jpg", "png", "gif", "dOcX", ".pptx", "pdf"});
-        activity.startActivityForResult(intent4, requestCode);
-    }
 }
